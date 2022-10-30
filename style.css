@@ -1,0 +1,54 @@
+body {
+ background:linear-gradient(118.7deg, #D5D2FC 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
+}
+.container {
+background:rgb(235, 233, 233);
+margin: 2rem;
+/* position: absolute;
+height: 884px;
+left: 75px;
+right: 75px;
+top: 70px; */
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.651));
+}
+.container1{
+    /* position: absolute; */
+/* width: 1126px;
+max-width: 100%; */
+height: 884px;
+max-height: 100%;
+background: radial-gradient(43.3% 107.22% at 51.09% 40.44%, #EFF2F6 0%, #F6E3EB 47.58%, #D5DEED 93.12%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+border-radius: 0px;
+}
+.container2{
+/* position: absolute; */
+/* height: ; */
+/* width: 100%; */
+max-height: 100%;
+padding: 0 2%;
+margin: 0 2%;
+background-color: #fff;
+box-shadow: 0px 4px 15px rgba(216, 210, 252, 0.64);
+border-radius: 90px;
+padding-left: 10%;
+padding-top:10%;
+}
+.container2 h1{
+  
+}
+
+.
+{
+/* position: absolute; */
+width: 64px;
+height: 66.4px;
+padding-left: 2.2%;
+padding-top: 2%;
+
+}
+
+logo
+{
+    width: 100px;
+}
