@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    overflow: hidden;
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom,#f1f4f9,#fda7ca) */
+    background:linear-gradient(118.7deg,  #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
+
+
+}
+section .color
+{
+    position: absolute;
+    filter: blur(200px);
+    /* background:linear-gradient(118.7deg, #cc8ef8 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%); */
+    background:linear-gradient(118.7deg, #ecdaf9 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
+
+}
+
+.box 
+{
+    position: relative;
+}
+
+.box .circle
+{
+    position: absolute;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    animation: animate 10s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+    animation-delay: calc(-0.5s * var(--i));
+
+
+}
+@keyframes animate
+{
+    0%,100%
+    {
+    transform: translate(-40px);
+}
+
+    50%
+    {
+    transform: translate(40px);
+    }
+}
+
+.box .circle:nth-child(1)
+{
+    top:-50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    
+}
+.box .circle:nth-child(2)
+{
+    bottom:-90px;
+    right: -50px;
+    width: 70px;
+    height: 70px;
+    z-index: 4;
+    
+}
+.box .circle:nth-child(3)
+{
+    top: 30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    z-index: 4;
+    
+}
+.box .circle:nth-child(4)
+{
+    top: 100px;
+    left: -40px;
+    width: 50px;
+    height: 50px;
+    z-index: 6;
+    
+}
+.box .circle:nth-child(5)
+{
+    bottom: 30px;
+    left: -50px;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    
+}
+.box .circle:nth-child(6)
+{
+    bottom: -50px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    
+}
+
+
+.container
+{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 10px 100px rgba(151, 151, 151, 0.303);
+    border-top: 1px solid rgba(196, 194, 194, 0.952);
+    border-right: 1px solid rgba(209, 207, 207, 0.986);
+    border-bottom: 1px solid rgba(177, 177, 177, 0.986);
+    border-left: 1px solid rgba(218, 216, 216, 0.986);
+}
+.form
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    align-items: center;
+    margin: 20px;
+    
+
+}
+.form h2
+{
+    position: relative;
+    margin: 10px;
+    color: violet;
+    font-size: 25px;
+    font-weight: 700;
+    /* text-shadow: 2px 2px 2px rgb(29, 29, 29); */
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    
+
+}
+.form h2::before
+{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    /* width: 0%; */
+    height: 2px;
+    background: rgb(5, 5, 5);
+    box-shadow: 0 2px 2px rgb(56, 55, 55);
+    transition: 0.4s linear;
+    /* cursor: pointer; */
+    width: 68%;
+}
+
+.form .inputBox
+{
+    width: 100%;
+    margin-top: 20px;
+    
+
+}
+.form .inputBox input
+{
+    width: 100%;
+    background: rgb(250, 188, 206);
+    border-radius: 20px;
+    outline: rgb(255, 3, 45);
+    padding: 6px 25px;
+    border: none;
+    box-shadow: 0 2px 2px rgb(151, 57, 73);
+    font-size: 16px;
+    letter-spacing: 1px;
+    shape-rendering: crispEdges;
+   
+
+}
+.form .inputBox ::placeholder
+
+{
+    color: rgb(88, 87, 87);
+    
+}
+
+.form .inputBox input[type="submit"]
+{    background: rgb(227, 172, 246);
+    color: rgb(4, 4, 4);
+    max-width: 100px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 80px;
+  
+    
+}
+.form .inputBox input[type="submit"]:hover
+{
+     background:pink;
+    
+    
+}
+.login{
+    margin-top: 7px;
+    color: rgb(2, 2, 2);
+}
+.login a:hover
+{
+    color: rgb(255, 3, 45);
+}
