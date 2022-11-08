@@ -23,12 +23,14 @@ i {
   width: 100px;
   margin-top: 20%;
   margin-left: 10px;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 
 
 img {
   display: flexbox;
-
+ 
 }
 /* .circleBase {
   border-radius: 50%;
