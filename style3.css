@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(118.7deg, #D5D2FC 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
+}
+
+.container {
+    margin: 5em;
+    background: linear-gradient(118.7deg, #e7e6f9 17.58%, #ece9fd 17.58%, #e2def9 17.59%, #fcf5f5 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #eef4fc 103.35%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.651));
+    display: flex;
+    height: auto;
+}
+
+i {
+    background: white;
+    border-radius: 40px;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+    margin-top: 20%;
+    margin-left: 10px;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+
+img {
+    display: flexbox;
+}
+
+
+/* .circleBase {
+  border-radius: 50%;
+}
+.circle1 {
+  width: 100px;
+  height: 100px;
+  background: white;
+  margin-left: -10%;
+  margin-top: 5%;
+  display: flex;
+}
+img {
+    width: 100px;
+
+} */
+
+.container1 {
+    background: linear-gradient(118.7deg, #D5D2FC 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
+    width: 1190px;
+    max-width: 100%;
+    height: 884px;
+    max-height: 100%;
+}
+
+.container2 {
+    height: 650px;
+    margin: 0 6%;
+    margin-top: 5%;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(216, 210, 252, 0.64);
+    border-radius: 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-button {
+    display: flex;
+}
+
+.nav1 img {
+    padding: 25px;
+}

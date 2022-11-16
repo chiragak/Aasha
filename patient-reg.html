@@ -6,12 +6,13 @@
     <title>Aasha</title>
     <link rel="icon" type="image/x-icon" href="/image/logo.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="nav1">
-            <i><img src="/image/women.png" width="160" height="130" /></i>
+            <i><img src="/image/th-2772691832-removebg-preview.png" width="160" height="130" /></i>
             <!-- <i><img src="/image/man.png" /></i> -->
         </div>
         <div class="container1">
@@ -68,18 +69,67 @@
                                 <input type="text" name="" required="" style="width:90%; " />
                                 <label>Address *</label>
                             </div>
-                            <div class="wrapper">
+                            <!-- <div class="wrapper">
                                 <div class="file-upload">
                                     <input type="file" />
+                                    <label>Upload Image</label>
                                     <i class="fa fa-arrow-up"></i>
                                 </div>
-                            </div>
+                            </div> -->
+                            <main class="main_full">
+                                <div class="cont">
+                                    <div class="panel">
+                                        <div class="button_outer">
+                                            <div class="button_upload">
+                                                <input type="file" name="" id="upload_file">
+                                                Upload Image *
+                                            </div>
+                                            <div class="processing_bar"></div>
+                                            <div class="success_box"></div>
+                                        </div>
+                                    </div>
+                                    <div class="error_msg"></div>
+                                    <div class="upload_file_view" id="upload_view">
+                                        <span class="file_remove">X</span>
+                                    </div>
+                                </div>
+                            </main>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        
+
+
+
+var btnUpload = $("#upload_file"),
+  btnOuter = $(".button_outer");
+ btnUpload.on("change", function(e){
+  var ext = btnUpload.val().split('.').pop().toLowerCase();
+  if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+   $(".error_msg").text("Not an Image...");
+  } else {
+   $(".error_msg").text("");
+   btnOuter.addClass("file_uploading");
+   setTimeout(function(){
+    btnOuter.addClass("file_uploaded");
+   },3000);
+   var uploadedFile = URL.createObjectURL(e.target.files[0]);
+   setTimeout(function(){
+    $("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+   },3500);
+  }
+ });
+ $(".file_remove").on("click", function(e){
+  $("#uploaded_view").removeClass("show");
+  $("#uploaded_view").find("img").remove();
+  btnOuter.removeClass("file_uploading");
+  btnOuter.removeClass("file_uploaded");
+ });
+    </script>
 </body>
 
 </html>
