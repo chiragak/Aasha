@@ -25,3 +25,8 @@
     background-color: pink;
     color: #000000;
 }
+#patient button
+{
+    background-color: rgb(104, 239, 104);
+    border: none;
+}
