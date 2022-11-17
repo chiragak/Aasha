@@ -1,0 +1,21 @@
+#patient td,
+#patient th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#patient tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#patient tr:hover {
+    background-color: rgb(255, 227, 231);
+}
+
+#patient th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: pink;
+    color: #000000;
+}
