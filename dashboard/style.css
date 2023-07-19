@@ -174,12 +174,16 @@ img {
 
 canvas {
     background-color: white;
+    border-radius: 23px;
 }
-.graph
+.graph1
 {
-    width: 300px;
-    margin: 20px;
     position: absolute;
-    border-radius: 25px;
+    
+    width: 500px;
+    margin: 20px;
+    
+   
+
    
 }
