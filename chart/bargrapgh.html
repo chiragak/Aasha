@@ -1,40 +1,46 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Month', '2023', '2022'],
-          ['Jan',  150,      100],
-          ['Feb',  200,      120],
-          ['Mar',  180,      130],
-          ['Apr',  250,      150],
-          ['May',  300,      180],
-          ['Jun',  280,      200],
-          ['Jul',  350,      220],
-          ['Aug',  400,      250],
-          ['Sep',  380,      280],
-          ['Oct',  450,      300],
-          ['Nov',  500,      320],
-          ['Dec',  480,      350]
-        ]);
-
-        var options = {
-          title: 'Patient Admissions',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
+<head>
+  <title>Treatment Success Rates</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="barChart"></canvas>
+  
+  <script>
+    var ctx = document.getElementById('barChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Treatment A', 'Treatment B', 'Treatment C', 'Treatment D'],
+        datasets: [
+          {
+            label: 'Success Rate',
+            data: [80, 75, 90, 85], // Sample data representing success rates in percentage
+            backgroundColor: 'rgba(54, 162, 235, 0.5)', // Customize the bar color
+            borderColor: 'rgba(54, 162, 235, 1)', // Customize the bar border color
+            borderWidth: 1 // Customize the bar border width
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100 // Customize the maximum value of the y-axis
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Treatment Success Rates',
+            font: {
+              size: 18
+            }
+          }
+        }
       }
-    </script>
-  </head>
-  <body>
-    <div id="curve_chart" style="width: 350px; height: 350px"></div>
-  </body>
+    });
+  </script>
+</body>
 </html>
