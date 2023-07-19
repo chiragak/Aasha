@@ -27,7 +27,7 @@
             <h1 style="padding-left:2%;">Dashboard</h1>
 
             
-            <div class="graph">
+            <div class="graph1">
 <canvas id="myChart"></canvas>
             </div>
 
@@ -41,14 +41,14 @@
       datasets: [
         {
           label: 'Dataset 1',
-          data: [100, 200, 300, 400, 500, 400, 300, 200, 100, 0, -100, 0],
+          data: [100, 200, 300, 400, 500, 400, 300, 200, 100, 0, 100, 0],
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
         },
         {
           label: 'Dataset 2',
-          data: [0, -100, 0, 100, 200, 300, 400, 500, 400, 300, 200, 100],
+          data: [0, 100, 0, 100, 200, 300, 400, 500, 400, 300, 200, 100],
           backgroundColor: 'rgba(54, 162, 235, 0.5)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
@@ -73,7 +73,7 @@
             display: true,
             text: 'Values'
           },
-          min: -100,
+          min: 0,
           max: 500
         }
       }
