@@ -1,39 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Chart.js Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-    <!-- <link rel="stylesheet" href="/patient-list/patient-list.css"> -->
-    <title>Dashboard</title>
-</head>
-
 <body>
-    <div class="container">
-        <div class="nav1">
-            <i><img src="../image/th-2772691832-removebg-preview.png" width="160" height="98"
-                    style="padding-top: 5%;" /></i>
-        </div>
-        <div class="container1">
-            <div class="nav">
+  <canvas id="myChart"></canvas>
 
-                <img src="../image/logo.png" style="width:100px; padding-left:2%;padding-top:1%" />
-
-            </div>
-            <h1 style="padding-left:2%;">Dashboard</h1>
-            <div class="graph">
-                <canvas id="myChart"></canvas>
-            </div>
-
-           
   <script>
     // Chart data
     var chartData = {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       datasets: [
         {
           label: 'Dataset 1',
@@ -84,5 +61,4 @@
     });
   </script>
 </body>
-
 </html>
