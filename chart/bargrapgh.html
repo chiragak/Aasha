@@ -1,64 +1,40 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Chart.js Example</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <canvas id="myChart"></canvas>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-  <script>
-    // Chart data
-    var chartData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      datasets: [
-        {
-          label: 'Dataset 1',
-          data: [100, 200, 300, 400, 500, 400, 300, 200, 100, 0, -100, 0],
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          borderWidth: 1
-        },
-        {
-          label: 'Dataset 2',
-          data: [0, -100, 0, 100, 200, 300, 400, 500, 400, 300, 200, 100],
-          backgroundColor: 'rgba(54, 162, 235, 0.5)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }
-      ]
-    };
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', '2023', '2022'],
+          ['Jan',  150,      100],
+          ['Feb',  200,      120],
+          ['Mar',  180,      130],
+          ['Apr',  250,      150],
+          ['May',  300,      180],
+          ['Jun',  280,      200],
+          ['Jul',  350,      220],
+          ['Aug',  400,      250],
+          ['Sep',  380,      280],
+          ['Oct',  450,      300],
+          ['Nov',  500,      320],
+          ['Dec',  480,      350]
+        ]);
 
-    // Chart options
-    var chartOptions = {
-      responsive: true,
-      scales: {
-        x: {
-          display: true,
-          title: {
-            display: true,
-            text: 'Months'
-          }
-        },
-        y: {
-          display: true,
-          title: {
-            display: true,
-            text: 'Values'
-          },
-          min: -100,
-          max: 500
-        }
+        var options = {
+          title: 'Patient Admissions',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
       }
-    };
-
-    // Create the chart
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: chartData,
-      options: chartOptions
-    });
-  </script>
-</body>
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 350px; height: 350px"></div>
+  </body>
 </html>
