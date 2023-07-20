@@ -181,6 +181,13 @@ img {
 }
 
 
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow the graphs to wrap if the container is not wide enough */
+  }
+  
 
 
   
