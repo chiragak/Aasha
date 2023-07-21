@@ -13,9 +13,6 @@ body {
 
 i {
     background: white;
-    /* border-radius: 40px; */
-    /* font-size: 30px; */
-    /* text-align: center; */
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 50%;
@@ -54,7 +51,8 @@ img {
     background: linear-gradient(118.7deg, #D5D2FC 17.58%, #D8D2FC 17.58%, #D8D2FC 17.59%, #FDE2E0 41.89%, #E6E4EA 68%, #E0E9F4 103.34%, rgba(230, 225, 232, 0) 103.35%, #E0E9F4 103.35%);
     width: 100%;
     max-width: 100%;
-    height: 884px;
+    height: auto;
+    padding-bottom: 50px;
     max-height: 100%;
 
 }
